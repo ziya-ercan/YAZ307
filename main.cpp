@@ -1,171 +1,144 @@
 #include <iostream>
-#include "Student.hpp"
-#include "MyTemplateFuncs.hpp"
-#include "Cents.hpp"
-#include "Array.hpp"
+#include <string>
+#include <queue>
+#include <stack>
+#include <utility>
+#include <map>
 
+#include "Cents.hpp"
 int main() 
 {
-    // LECTURE-5
-    // Student student1{"Ziya Ercan", 34, 1.70, 1129877, 1, "university", 3.00};
-    // // Student* p_student{&student1};
+  //LECTURE 7
+  // std::queue
 
-    // Person person1{"Mustafa Keser", 65, 1.68, 123456789};
-    // Person* p_person{&person1};
+  // std::queue<double> que1;
 
-    // // p_student->printClass();
-    // // student1.printClass();
+  // que1.push(1.0); //First in- First out
+  // que1.push(2.0);
 
-    // // person1.printClass();
-    // p_person->printClass();
+  // double top_queue{que1.front()};
+  // std::cout<<que1.front()<<' '<<top_queue<<'\n';
 
-    // Person* p_person2{&student1};
-    // p_person2->printClass();
-    
-    // // student1.print();
+  // que1.pop();
+  // std::cout<<que1.front()<<'\n';
 
-    
-    // // p_student->Person::print();
-    // // p_student->print();
-    // // std::cout<<"Bu kisinin yasi = "<<person1.getAge()<<'\n';
-    // // std::cout<<"ID = "<<person1.getId()<<'\n';
+  // //std::stack
+  // std::stack<int> stk1;
+  // if(stk1.empty())
+  //   std::cout<<"The stack is empty\n";
 
-    // // Person person2;
-    // // std::cout<<"Bu kisinin yasi = "<<person2.getAge()<<'\n';
-    // // std::cout<<"ID = "<<person2.getId()<<'\n';
+  // stk1.push(1);
+  // stk1.push(2);
+  // stk1.push(3);
 
-    // // const Person person3{"Mustafa Keser", 65, 1.68, 123456789};
-    // // std::cout<<"ID = "<<person3.getId()<<'\n';
+  // auto stk1_size{stk1.size()};
 
-    // // std::cout<<"Total Person = "<<Person::s_number<<'\n';
+  // for(int i{0}; i<static_cast<int>(stk1_size);++i)
+  // {
+  //   std::cout<<"The top element = "<<stk1.top()<<'\n';
+  //   std::cout<<"The size = "<<stk1.size()<<'\n';
+  //   stk1.pop();
 
+  // }
 
-    // LECTURE-6
+  //std::priority_queue
 
-    // int my_par{-6};
-    // std::cout<<"|par| = "<<abs(my_par)<<'\n';
+  // std::priority_queue<int> pri_que1;
 
-    // double my_par2{3.56};
-    // std::cout<<"|par| = "<<abs(my_par2)<<'\n';
+  // pri_que1.push(1);        // 9--0--3
+  // pri_que1.push(6);
+  // pri_que1.push(2);
 
-    // char my_par3{'h'};
-    // std::cout<<"|par| = "<<abs(my_par3)<<'\n';
+  // auto pri_que1_size{pri_que1.size()};
 
-    // int my_int_par1{3};
-    // int my_int_par2{6};
-    // std::cout<<"Bigger = "<<bigger(my_int_par1, my_int_par2)<<'\n';
+  // for(int i{0}; i<static_cast<int>(pri_que1_size);++i)
+  // {
+  //   std::cout<<"The top element = "<<pri_que1.top()<<'\n';
+  //   std::cout<<"The size = "<<pri_que1.size()<<'\n';
+  //   pri_que1.pop();
 
-    // double my_d_par1{3.2};
-    // double my_d_par2{6.8};
-    // std::cout<<"Bigger = "<<bigger(my_d_par1, my_d_par2)<<'\n';
+  // }
+      
+  // std::pair
 
-    // Cents penny{1};
-    // Cents dime{10};
-    // std::cout<<"Bigger = "<<bigger(penny, dime)<<'\n';
-
-    // Array<int> my_int_array{5};
-    // std::cout<<"The length = "<<my_int_array.getLength()<<'\n';
- 
-  // DERS 7 : STL 
-
-  // 1. std::array
-
-//   std::array<int, 5> arr1 ; // declare an array XXXXX
-//   arr1 = {0,1,2,3,4};
-
-//   std::array<int, 5> arr2 = {5,6,7,8,9}; // initialize via member initializer list 
-
-//   std::array<Cents, 3> arr3 {Cents(1), Cents(5), Cents(10)};
+  // std::pair<std::string, Cents> pair1 {"Dime", Cents{10}};
+  // std::pair<std::string, Cents> pair2 = std::make_pair("Quarter", Cents(25));
+  // std::pair<std::string, Cents> pair3 = std::make_pair("Penny", Cents(1));
 
 
-//   for(int i{0};i < int(arr1.size()); ++i)
-//   {
-//     std::cout<<"Index = "<<i<<" Element = "<<arr1.at(i)<<'\n';
-//   }
+  // std::cout<<"The key = "<<pair1.first<<" The value = "<<pair1.second<<'\n';
+  
+  // std::pair<int, double> pair4 {3, 4.7};
+  // std::pair<int, double> pair5 {2, 7.7};
 
-//   for(int i{0};i < int(arr3.size()); ++i)
-//   {
-//     std::cout<<"Index = "<<i<<" Element = "<<arr3.at(i)<<'\n';
-//   }
+  // std::cout<<( pair4 > pair5);
 
-//   std::cout<<"First element is "<<arr1.front()<<'\n'; 
-//   std::cout<<"Last element is "<<arr1.back()<<'\n';
+  //std::map
 
-//   if(!arr2.empty())
-//     std::cout<<"The array is not empty\n";
+   std::map<std::string, double> map1{{"Eren", 7.9}, {"Sefa", 9.2}};
+   map1.insert(std::make_pair("Ziya", 4.7));
 
-//   std::array<int,0> arr4;
-//   if(!arr4.empty())
-//     std::cout<<"The array is not empty\n"; 
-//   else
-//     std::cout<<"The array is empty\n"; 
+   std::cout<<"Eren has "<<map1["Eren"]<<" points\n";
+   map1["Asude"] = 9.9;
+   std::cout<<"Asude has "<<map1["Asude"]<<" points\n";
+   map1["Ziya"] = 2.1;
+   map1.insert(std::make_pair("Ziya", 4.7));
+   std::cout<<"Ziya has "<<map1["Ziya"]<<" points\n";
+
+   if(map1.find("Ziya") == map1.end())
+      std::cout<<"There is no item\n";
+   else   
+      std::cout<<"The value is "<<map1.find("Ziya")->second<<'\n';
+
+      
 
 
-//   // iterator örneği
 
-//   for(auto it{arr1.begin()}; it != arr1.end(); ++it)
-//   {
-//     std::cout<<"The element is "<<*it<<'\n';
-//     std::cout<<"The address of element is "<<&(*it)<<'\n';
-//   }  
-    
-// for(auto it{arr1.rbegin()}; it != arr1.rend(); ++it)
-//   {
-//     std::cout<<"The element is "<<*it<<'\n';
-//     std::cout<<"The address of element is "<<&(*it)<<'\n';
-//   }  
 
-// 2. std::vector
 
-std::vector<int> vect1{9,8,7,6,5,4,3,2,1,0};
-// std::cout<<"The MAX size of vect1 = "<<vect1.max_size()<<'\n';
 
-//std::cout<<"The size of vect1 = "<<vect1.size()<<'\n';
-//std::cout<<"The capacity of vect1 = "<<vect1.capacity()<<'\n';
 
-// int value{0};
-// for(int i{0};i< 20 ; ++i)
-// {
-//     std::cout<<"The size of vect1 = "<<vect1.size()<<'\n';
-//     std::cout<<"The capacity of vect1 = "<<vect1.capacity()<<'\n'; 
-//     vect1.push_back(--value); 
 
-// }
 
-// for(int i{0};i< 20 ; ++i)
-// {
-//     std::cout<<"The size of vect1 = "<<vect1.size()<<'\n';
-//     std::cout<<"The capacity of vect1 = "<<vect1.capacity()<<'\n'; 
-//     vect1.pop_back(); 
 
-//     if (vect1.capacity() - vect1.size() > 10)
-//       vect1.shrink_to_fit();
-// }
 
-// for(auto it{vect1.begin()}; it != vect1.end(); ++it)
-//   std::cout<<"The element = "<<*it<<'\n';
 
-vect1.shrink_to_fit();  
-std::cout<<"The size of vect1 = "<<vect1.size()<<'\n';
-std::cout<<"The capacity of vect1 = "<<vect1.capacity()<<'\n';
 
-vect1.resize(5);
-for(auto it{vect1.begin()}; it != vect1.end(); ++it)
-  std::cout<<"The element = "<<*it<<'\n';
 
-std::cout<<"The size of vect1 = "<<vect1.size()<<'\n';
-std::cout<<"The capacity of vect1 = "<<vect1.capacity()<<'\n'; 
 
-vect1.reserve(100);
-std::cout<<"AFTER RESERVE : The capacity of vect1 = "<<vect1.capacity()<<'\n'; 
 
-for(int i{0};i< 10 ; ++i)
-{
-    std::cout<<"The size of vect1 = "<<vect1.size()<<'\n';
-    if(vect1.empty())
-      break;
-    vect1.pop_back(); 
 
-}
+
+
+
+  //std::map
+  // // Initializing a map with integer keys
+  // // and corresponding string values
+  // std::map<int, string> Employees; 
+
+  // //Inserting values in map using insert function
+  // Employees.insert ( std::pair<int, string>(101,"Jon") );
+  // Employees.insert ( std::pair<int, string>(103,"Daenerys") );
+  // Employees.insert ( std::pair<int, string>(104,"Arya") );
+
+  // // Inserting values using Array index notation
+  // Employees[105] = "Sansa";  
+  // Employees[102] = "Tyrion"; 
+  
+  // cout << "Size of the map is " << Employees.size() << endl << endl;  
+
+  // // Printing values in the map
+  // cout << endl << "Default Order of value in map:" << endl;  
+  // for( map<int,string>::iterator iter=Employees.begin(); iter!=Employees.end(); ++iter)  
+  // {  
+  //   cout << (*iter).first << ": " << (*iter).second << endl;  
+  // }  
+  
+  // // Finding the value corresponding to the key '102'
+  // std::map<int, string>::iterator it = Employees.find(102);
+  // if (it != Employees.end()){
+  //   std::cout <<endl<< "Value of key = 102 => " << Employees.find(102)->second << '\n';
+  // }
+
   return 0; 
 }  
