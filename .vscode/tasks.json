@@ -12,14 +12,14 @@
 				"C:\\Program Files\\MySQL\\Connector C++ 8.0\\include",
 				"/Zi",
 				"/EHsc",
-				"/std:c++11",
 				"/Fe:",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 				"${file}",
 				"/link",
 				"/LIBPATH:C:\\Program Files\\MySQL\\Connector C++ 8.0\\lib64\\vs14",
-				"/LIBPATH:C:\\Program Files\\MySQL\\Connector C++ 8.0\\lib64",
-				"mysqlcppconn8.lib"				
+				"mysqlcppconn8.lib",
+				"libssl.lib",
+				"libcrypto.lib"
 			//	".\\src\\*.cpp"
 			],
 			"options": {
