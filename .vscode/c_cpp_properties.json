@@ -3,7 +3,9 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/src",
+                "C:\\Program Files\\MySQL\\Connector C++ 8.0\\include"
             ],
             "defines": [
                 "_DEBUG",
@@ -13,7 +15,7 @@
             "windowsSdkVersion": "10.0.17763.0",
             "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe",
             "cStandard": "c17",
-            "cppStandard": "c++17",
+            "cppStandard": "c++11",
             "intelliSenseMode": "msvc-x64"
         }
     ],
