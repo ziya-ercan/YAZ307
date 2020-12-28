@@ -6,8 +6,6 @@
 			"label": "C/C++: cl.exe build active file",
 			"command": "cl.exe",
 			"args": [
-				// "/I",
-				// ".//src",
 				"/I",
 				"C:\\Program Files\\MySQL\\Connector C++ 8.0\\include",
 				"/Zi",
@@ -20,7 +18,6 @@
 				"mysqlcppconn8.lib",
 				"libssl.lib",
 				"libcrypto.lib"
-			//	".\\src\\*.cpp"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"

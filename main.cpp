@@ -14,7 +14,7 @@ try {
   Session sess(url);
 
   cout <<"Session accepted, creating collection..." <<endl;
-  Schema sch= sess.getSchema("test"); //sakila/actor
+  Schema sch= sess.getSchema("test"); 
   Collection coll= sch.createCollection("c1", true);
   cout <<"Inserting documents..." <<endl;
   coll.remove("true").execute();
