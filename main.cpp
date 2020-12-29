@@ -8,7 +8,7 @@ int main()
 
 try {
   
-  const char   *url = ("mysqlx://ziya:PJuCiRfF9e@localhost:33060");
+  const char   *url = ("mysqlx://username:password@localhost:33060");
   cout << "Creating session on " << url
        << " ..." << endl;
   Session sess(url);
